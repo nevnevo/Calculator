@@ -1,4 +1,4 @@
-﻿<Page
+﻿ <Page
     x:Class="Calculator.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,82 +6,144 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="Honeydew">
+    Background="Honeydew"><Grid>
+    <Grid.Background>
+        <ImageBrush ImageSource="Assets/Backgrounds/space1.jpg"></ImageBrush>
+    </Grid.Background>
+    <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+        <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+    </Grid.ColumnDefinitions>
 
-    <Grid>
-        <Grid.Background><ImageBrush ImageSource="Assets/Backgrounds/space1.jpg"></ImageBrush></Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            
-            
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            
-            <ColumnDefinition></ColumnDefinition>
-            
+    <Viewbox Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2">
+        <TextBlock Text="Nevo's Calculator" FontSize="20" FontStyle="Oblique" Foreground="Red"/>
+    </Viewbox>
 
-                <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="3" Grid.ColumnSpan="5" Grid.RowSpan="2" Text="Nevo's Calculator" FontSize="60" FontStyle="Oblique" Foreground="Red"></TextBlock>
-        
-        
-        
-        <Button x:Name="oneBtn" Grid.Column="1" Grid.Row="2" Width="150" Height="80"  HorizontalAlignment="Center" Content="1"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="twoBtn" Grid.Column="2" Grid.Row="2" Width="150" Height="80"  HorizontalAlignment="Center" Content="2"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80"  HorizontalAlignment="Center" Content="3"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="clearBtn" Grid.Column="4" Grid.Row="2" Width="150" Height="80"  HorizontalAlignment="Center" Content="C"  FontSize="60" Foreground="White"></Button>
-        
-        <TextBlock Text="Enter first number" FontSize="30"  Grid.Column="6" Grid.Row="2" Height="60" Grid.ColumnSpan="3" Foreground="DeepPink"></TextBlock>
-        <TextBox x:Name="firstNum"  FontSize="30"  Grid.Column="6" Grid.Row="3" Height="60" Grid.ColumnSpan="3"></TextBox>
-        <TextBlock Text="Enter second number" FontSize="30"  Grid.Column="6" Grid.Row="4" Height="60" Grid.ColumnSpan="3" Foreground="MediumPurple"></TextBlock>
-        <TextBox x:Name="secNum"  FontSize="30"  Grid.Column="6" Grid.Row="5" Height="60" Grid.ColumnSpan="3"></TextBox>
+    <!-- Buttons with corresponding images -->
+    <Button x:Name="oneBtn" Grid.Column="1" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/oneBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="twoBtn" Grid.Column="2" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/twoBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/threeBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="clearBtn" Grid.Column="4" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/clearBtn.png" Stretch="Fill"></Image>
+    </Button>
 
-        <TextBlock Text="Answer" FontSize="30"  Grid.Column="6" Grid.Row="6" Height="60" Grid.ColumnSpan="3" Foreground="Blue"></TextBlock>
-        <TextBox x:Name="ansBox"  FontSize="30"  Grid.Column="6" Grid.Row="7" Height="60" Grid.ColumnSpan="3"></TextBox>
+    <Viewbox Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2">
+        <TextBlock Text="Enter first number" Height="20" FontWeight="Bold" Foreground="DeepPink"/>
+    </Viewbox>
+    <Border Grid.Column="6" Grid.Row="3" Height="60" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="5">
+        <Viewbox>
+            <TextBlock x:Name="firstNum" FontSize="30"/>
+        </Viewbox>
+    </Border>
 
+    <Viewbox Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="2">
+        <TextBlock Text="Enter second number" FontSize="30" Height="50" FontWeight="Bold" Foreground="MediumPurple"/>
+    </Viewbox>
+    <Border Grid.Column="6" Grid.Row="5" Height="60" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="5">
+        <Viewbox>
+            <TextBlock x:Name="secNum" FontSize="30"/>
+        </Viewbox>
+    </Border>
 
+    <Viewbox Grid.Column="6" Grid.Row="6" Grid.ColumnSpan="2">
+        <TextBlock Text="Answer" FontSize="30" Height="60" Foreground="DarkSalmon" FontWeight="Bold"/>
+    </Viewbox>
+    <Border Grid.Column="6" Grid.Row="7" Height="60" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="5">
+        <Viewbox>
+            <TextBlock x:Name="ansBox" FontSize="30"/>
+        </Viewbox>
+    </Border>
 
-        <Button x:Name="fourBtn" Grid.Column="1" Grid.Row="3" Width="150" Height="80"  HorizontalAlignment="Center" Content="4"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="fiveBtn" Grid.Column="2" Grid.Row="3" Width="150" Height="80"  HorizontalAlignment="Center" Content="5"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="sixBtn" Grid.Column="3" Grid.Row="3" Width="150" Height="80"  HorizontalAlignment="Center" Content="6"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="backBtn" Grid.Column="4" Grid.Row="3" Width="150" Height="80"  HorizontalAlignment="Center" Content="back"  FontSize="60" Foreground="White"></Button>
+    <!-- Number buttons with images -->
+    <Button x:Name="fourBtn" Grid.Column="1" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/fourBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="fiveBtn" Grid.Column="2" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/fiveBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="sixBtn" Grid.Column="3" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/sixBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="backBtn" Grid.Column="4" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/backBtn.png" Stretch="Fill"></Image>
+    </Button>
 
-        <Button x:Name="sevenBtn" Grid.Column="1" Grid.Row="4" Width="150" Height="80"  HorizontalAlignment="Center" Content="7"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="eightBtn" Grid.Column="2" Grid.Row="4" Width="150" Height="80"  HorizontalAlignment="Center" Content="8"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="nineBtn" Grid.Column="3" Grid.Row="4" Width="150" Height="80"  HorizontalAlignment="Center" Content="9"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="ansBtn" Grid.Column="4" Grid.Row="4" Width="150" Height="80"  HorizontalAlignment="Center" Content="Ans"  FontSize="60" Foreground="White"></Button>
+    <Button x:Name="sevenBtn" Grid.Column="1" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/sevenBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="eightBtn" Grid.Column="2" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/eightBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="nineBtn" Grid.Column="3" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/nineBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="ansBtn" Grid.Column="4" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/ansBtn.png" Stretch="Fill"></Image>
+    </Button>
 
-        <Button x:Name="zeroBtn" Grid.Column="1" Grid.Row="5" Width="150" Height="80"  HorizontalAlignment="Center" Content="0"  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="dotBtn" Grid.Column="2" Grid.Row="5" Width="150" Height="80"   HorizontalAlignment="Center" Content="."  FontSize="50" Foreground="White"></Button>  <!--doesnt show the dot for me **need oleg-->
-        <Button x:Name="equBtn" Grid.Column="3" Grid.Row="5" Width="150" Height="80"  HorizontalAlignment="Center" Content="="  FontSize="60" Foreground="White"></Button>
-        <Button x:Name="negBtn" Grid.Column="4" Grid.Row="5" Width="150" Height="80"  HorizontalAlignment="Center" Content="(-)"  FontSize="60" Foreground="White"></Button>
+    <Button x:Name="zeroBtn" Grid.Column="1" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/zeroBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="dotBtn" Grid.Column="2" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="50" Foreground="White">
+        <Image Source="Assets/Digits/dotBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="equBtn" Grid.Column="3" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/equBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="negBtn" Grid.Column="4" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Image Source="Assets/Digits/negBtn.png" Stretch="Fill"></Image>
+    </Button>
 
-        
-        <Button x:Name="minusBtn" Grid.Column="1" Grid.Row="6" Width="150" Height="80"  HorizontalAlignment="Center" Content="-"  FontSize="60" Foreground="Red"></Button>
-        <Button x:Name="plusBtn" Grid.Column="2" Grid.Row="6" Width="150" Height="80"  HorizontalAlignment="Center" Content="+"  FontSize="60" Foreground="Green"></Button>
-        <Button x:Name="mulBtn" Grid.Column="3" Grid.Row="6" Width="150" Height="80"  HorizontalAlignment="Center" Content="*"  FontSize="60" Foreground="Green"></Button>
-        <Button x:Name="divBtn" Grid.Column="4" Grid.Row="6" Width="150" Height="80"  HorizontalAlignment="Center" Content="/"  FontSize="60" Foreground="Red"></Button>
-        
-        
-        <Button x:Name="sinBtn" Grid.Column="1" Grid.Row="7" Width="150" Height="80"  HorizontalAlignment="Center" Content="sin"  FontSize="60" Foreground="Yellow"></Button>
-        <Button x:Name="cosBtn" Grid.Column="2" Grid.Row="7" Width="150" Height="80"  HorizontalAlignment="Center" Content="cos"  FontSize="60" Foreground="Yellow"></Button>
-        <Button x:Name="tanBtn" Grid.Column="3" Grid.Row="7" Width="150" Height="80"  HorizontalAlignment="Center" Content="tan"  FontSize="60" Foreground="Yellow"></Button>
-        
-    </Grid>
+    <!-- Operator buttons with images -->
+    <Button x:Name="minusBtn" Grid.Column="1" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Red">
+        <Image Source="Assets/Digits/minusBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="plusBtn" Grid.Column="2" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green">
+        <Image Source="Assets/Digits/plusBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="mulBtn" Grid.Column="3" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green">
+        <Image Source="Assets/Digits/mulBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="divBtn" Grid.Column="4" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+        <Image Source="Assets/Digits/divBtn.png" Stretch="Fill"></Image>
+    </Button>
+
+    <Button x:Name="sinBtn" Grid.Column="1" Grid.Row="7" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+        <Image Source="Assets/Digits/sinBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="cosBtn" Grid.Column="2" Grid.Row="7" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+        <Image Source="Assets/Digits/cosBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="tanBtn" Grid.Column="3" Grid.Row="7" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+        <Image Source="Assets/Digits/tanBtn.png" Stretch="Fill"></Image>
+    </Button>
+    <Button x:Name="queBtn" Grid.Column="0" Grid.Row="0" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+        <Image Source="Assets/Digits/queBtn.png" Stretch="Fill"></Image>
+    </Button>
+
+</Grid>
 </Page>
