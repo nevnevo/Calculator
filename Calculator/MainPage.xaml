@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="Honeydew"><Grid>
     <Grid.Background>
-        <ImageBrush ImageSource="Assets/Backgrounds/space1.jpg"></ImageBrush>
+        <ImageBrush ImageSource="Assets/Backgrounds/bg2.jpg"></ImageBrush>
     </Grid.Background>
     <Grid.RowDefinitions>
         <RowDefinition></RowDefinition>
@@ -33,22 +33,22 @@
         <ColumnDefinition></ColumnDefinition>
     </Grid.ColumnDefinitions>
 
-    <Viewbox Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2">
+    <Viewbox Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
         <TextBlock Text="Nevo's Calculator" FontSize="20" FontStyle="Oblique" Foreground="Red"/>
     </Viewbox>
 
-    <!-- Buttons with corresponding images -->
-    <Button x:Name="oneBtn" Grid.Column="1" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
-        <Image Source="Assets/Digits/oneBtn.png" Stretch="Fill"></Image>
+        
+        <Button x:Name="oneBtn" Grid.Column="1" Grid.Row="2"  Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White" Click="oneBtn_Click_1">
+            <Image  x:Name="oneImg" Source="Assets/Digits/oneBtn.png" Stretch="Fill" Height="67" VerticalAlignment="Top"></Image>
     </Button>
-    <Button x:Name="twoBtn" Grid.Column="2" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
-        <Image Source="Assets/Digits/twoBtn.png" Stretch="Fill"></Image>
-    </Button>
-    <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+        <Button x:Name="twoBtn" Grid.Column="2" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="twoBtn_Click">
+            <Image Source="Assets/Digits/twoBtn.png" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
         <Image Source="Assets/Digits/threeBtn.png" Stretch="Fill"></Image>
     </Button>
     <Button x:Name="clearBtn" Grid.Column="4" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
-        <Image Source="Assets/Digits/clearBtn.png" Stretch="Fill"></Image>
+        <Image Source="Assets/Digits/clearBtn.png" Stretch="Fill" Height="67" VerticalAlignment="Top"></Image>
     </Button>
 
     <Viewbox Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2">
@@ -56,7 +56,7 @@
     </Viewbox>
     <Border Grid.Column="6" Grid.Row="3" Height="60" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="5">
         <Viewbox>
-            <TextBlock x:Name="firstNum" FontSize="30"/>
+            <TextBlock x:Name="firstNumTXT" FontSize="30"/>
         </Viewbox>
     </Border>
 
@@ -65,7 +65,7 @@
     </Viewbox>
     <Border Grid.Column="6" Grid.Row="5" Height="60" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="5">
         <Viewbox>
-            <TextBlock x:Name="secNum" FontSize="30"/>
+            <TextBlock x:Name="secNumTXT" FontSize="30"/>
         </Viewbox>
     </Border>
 
@@ -78,7 +78,7 @@
         </Viewbox>
     </Border>
 
-    <!-- Number buttons with images -->
+    
     <Button x:Name="fourBtn" Grid.Column="1" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
         <Image Source="Assets/Digits/fourBtn.png" Stretch="Fill"></Image>
     </Button>
@@ -112,13 +112,13 @@
         <Image Source="Assets/Digits/dotBtn.png" Stretch="Fill"></Image>
     </Button>
     <Button x:Name="equBtn" Grid.Column="3" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
-        <Image Source="Assets/Digits/equBtn.png" Stretch="Fill"></Image>
-    </Button>
+        <Image Source="Assets/Digits/equBtn.png" Stretch="Fill"/>
+        </Button>
     <Button x:Name="negBtn" Grid.Column="4" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
         <Image Source="Assets/Digits/negBtn.png" Stretch="Fill"></Image>
     </Button>
 
-    <!-- Operator buttons with images -->
+   
     <Button x:Name="minusBtn" Grid.Column="1" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Red">
         <Image Source="Assets/Digits/minusBtn.png" Stretch="Fill"></Image>
     </Button>
@@ -141,8 +141,11 @@
     <Button x:Name="tanBtn" Grid.Column="3" Grid.Row="7" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
         <Image Source="Assets/Digits/tanBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="queBtn" Grid.Column="0" Grid.Row="0" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
-        <Image Source="Assets/Digits/queBtn.png" Stretch="Fill"></Image>
+    <Button x:Name="queBtn" Grid.Column="0" Grid.RowSpan="1"  
+            Grid.Row="0" Width="150"  HorizontalAlignment="Center" 
+            FontSize="60" Foreground="Yellow" Click="queBtn_Click" PointerEntered="queBtn_PointerEntered_1">
+        <Image x:Name="helpImg" Source="Assets/Digits/helpBtn1.png" Stretch="Fill" ></Image>
+         
     </Button>
 
 </Grid>

@@ -11,7 +11,7 @@
     <AssemblyName>Calculator</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -180,6 +180,7 @@
     <Content Include="Assets\App\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\App\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\App\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Backgrounds\bg2.jpg" />
     <Content Include="Assets\Backgrounds\blackmatte.jpg" />
     <Content Include="Assets\Backgrounds\space1.jpg" />
     <Content Include="Assets\Digits\ansBtn.png" />
@@ -192,6 +193,8 @@
     <Content Include="Assets\Digits\equBtn.png" />
     <Content Include="Assets\Digits\fiveBtn.png" />
     <Content Include="Assets\Digits\fourBtn.png" />
+    <Content Include="Assets\Digits\helpBtn1.png" />
+    <Content Include="Assets\Digits\helpBtn2.png" />
     <Content Include="Assets\Digits\minusBtn.png" />
     <Content Include="Assets\Digits\mulBtn.png" />
     <Content Include="Assets\Digits\negBtn.png" />
