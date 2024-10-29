@@ -44,10 +44,10 @@
         <Button x:Name="twoBtn" Grid.Column="2" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="twoBtn_Click">
             <Image Source="Assets/Digits/twoBtn.png" Stretch="Fill"></Image>
         </Button>
-        <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+        <Button x:Name="threeBtn" Grid.Column="3" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White" Click="threeBtn_Click">
         <Image Source="Assets/Digits/threeBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="clearBtn" Grid.Column="4" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White">
+    <Button x:Name="clearBtn" Grid.Column="4" Grid.Row="2" Width="150" Height="80" HorizontalAlignment="Center"  FontSize="60" Foreground="White" >
         <Image Source="Assets/Digits/clearBtn.png" Stretch="Fill" Height="67" VerticalAlignment="Top"></Image>
     </Button>
 
@@ -78,34 +78,34 @@
         </Viewbox>
     </Border>
 
-    
-    <Button x:Name="fourBtn" Grid.Column="1" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+
+        <Button x:Name="fourBtn" Grid.Column="1" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="fourBtn_Click">
         <Image Source="Assets/Digits/fourBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="fiveBtn" Grid.Column="2" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="fiveBtn" Grid.Column="2" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="fiveBtn_Click">
         <Image Source="Assets/Digits/fiveBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="sixBtn" Grid.Column="3" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="sixBtn" Grid.Column="3" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="sixBtn_Click">
         <Image Source="Assets/Digits/sixBtn.png" Stretch="Fill"></Image>
     </Button>
     <Button x:Name="backBtn" Grid.Column="4" Grid.Row="3" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
         <Image Source="Assets/Digits/backBtn.png" Stretch="Fill"></Image>
     </Button>
 
-    <Button x:Name="sevenBtn" Grid.Column="1" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="sevenBtn" Grid.Column="1" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="sevenBtn_Click">
         <Image Source="Assets/Digits/sevenBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="eightBtn" Grid.Column="2" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="eightBtn" Grid.Column="2" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="eightBtn_Click">
         <Image Source="Assets/Digits/eightBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="nineBtn" Grid.Column="3" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="nineBtn" Grid.Column="3" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="nineBtn_Click">
         <Image Source="Assets/Digits/nineBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="ansBtn" Grid.Column="4" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="ansBtn" Grid.Column="4" Grid.Row="4" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="ansBtn_Click">
         <Image Source="Assets/Digits/ansBtn.png" Stretch="Fill"></Image>
     </Button>
 
-    <Button x:Name="zeroBtn" Grid.Column="1" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White">
+        <Button x:Name="zeroBtn" Grid.Column="1" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="White" Click="zeroBtn_Click"> 
         <Image Source="Assets/Digits/zeroBtn.png" Stretch="Fill"></Image>
     </Button>
     <Button x:Name="dotBtn" Grid.Column="2" Grid.Row="5" Width="150" Height="80" HorizontalAlignment="Center" FontSize="50" Foreground="White">
@@ -119,16 +119,16 @@
     </Button>
 
    
-    <Button x:Name="minusBtn" Grid.Column="1" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Red">
+    <Button x:Name="minusBtn" Grid.Column="1" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Red" Click="minusBtn_Click">
         <Image Source="Assets/Digits/minusBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="plusBtn" Grid.Column="2" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green">
+    <Button x:Name="plusBtn" Grid.Column="2" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green" Click="plusBtn_Click">
         <Image Source="Assets/Digits/plusBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="mulBtn" Grid.Column="3" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green">
+    <Button x:Name="mulBtn" Grid.Column="3" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Green" Click="mulBtn_Click">
         <Image Source="Assets/Digits/mulBtn.png" Stretch="Fill"></Image>
     </Button>
-    <Button x:Name="divBtn" Grid.Column="4" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow">
+    <Button x:Name="divBtn" Grid.Column="4" Grid.Row="6" Width="150" Height="80" HorizontalAlignment="Center" FontSize="60" Foreground="Yellow" Click="divBtn_Click">
         <Image Source="Assets/Digits/divBtn.png" Stretch="Fill"></Image>
     </Button>
 
@@ -143,7 +143,7 @@
     </Button>
     <Button x:Name="queBtn" Grid.Column="0" Grid.RowSpan="1"  
             Grid.Row="0" Width="150"  HorizontalAlignment="Center" 
-            FontSize="60" Foreground="Yellow" Click="queBtn_Click" PointerEntered="queBtn_PointerEntered_1">
+            FontSize="60" Foreground="Yellow" Click="queBtn_Click" PointerEntered="queBtn_PointerEntered_1" PointerExited="queBtn_PointerExited">
         <Image x:Name="helpImg" Source="Assets/Digits/helpBtn1.png" Stretch="Fill" ></Image>
          
     </Button>
