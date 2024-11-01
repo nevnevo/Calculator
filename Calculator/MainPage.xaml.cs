@@ -24,8 +24,12 @@ namespace Calculator
         private double _answer=0;
         private double _num1=0;
         private double _num2=0;
+        private double _RadDeg=Math.PI/180;
         private char _operator = '@';
         private bool isNeg = false;
+        private bool _shift = false;
+        
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -62,7 +66,10 @@ namespace Calculator
 
         private void queBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if(!(HelpGrid.Visibility == Visibility.Visible))
+                HelpGrid.Visibility = Visibility.Visible;
+            else
+                HelpGrid.Visibility = Visibility.Collapsed;
         }
 
       
@@ -163,8 +170,16 @@ namespace Calculator
 
         private void equBtn_Click(object sender, RoutedEventArgs e)
         {
-            _num1 = double.Parse(firstNumTXT.Text);
-            _num2 = double.Parse(secNumTXT.Text);
+            if (secNumTXT.Text != "")
+            {
+                if (firstNumTXT.Text == "")
+                    _num1 = 0;
+                else
+                    _num1 = double.Parse(firstNumTXT.Text);
+                
+                _num2 = double.Parse(secNumTXT.Text);
+            }
+           
             switch(_operator)
             {
                 case '+':
@@ -196,19 +211,53 @@ namespace Calculator
                     }
                     break;
                 case 's':
-                    _answer = Math.Sin(_num2);
-                    ansBox.Text = _answer.ToString();
-                    ClearALl();
+                    if (!_shift) {
+                        _answer = Math.Sin(_num2* _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+                        
+                    }
+                    else
+                    {
+                        _answer = Math.Sinh(_num2 * _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+                        
+                    }
                     break;
+
+
                 case 't':
-                    _answer = Math.Tan(_num2);
-                    ansBox.Text = _answer.ToString();
-                    ClearALl();
+                    if (!_shift)
+                    {
+                        _answer = Math.Tan(_num2 * _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+
+                    }
+                    else
+                    {
+                        _answer = Math.Atan(_num2 * _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+
+                    }
                     break;
                 case 'c':
-                    _answer = Math.Cos(_num2);
-                    ansBox.Text = _answer.ToString();
-                    ClearALl();
+                    if (!_shift)
+                    {
+                        _answer = Math.Cos(_num2 * _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+
+                    }
+                    else
+                    {
+                        _answer = Math.Acos(_num2 * _RadDeg);
+                        ansBox.Text = _answer.ToString();
+                        ClearALl();
+
+                    }
                     break;
             }
         }
@@ -217,20 +266,28 @@ namespace Calculator
 
         private void backBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            Ctextbox().Text = secNumTXT.Text.ToString().Substring(0, secNumTXT.Text.ToString().Length - 1);
+            Ctextbox().Text = Ctextbox().Text.ToString().Substring(0, Ctextbox().Text.ToString().Length - 1);
         }
 
         private void negBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(!isNeg)
+            if (!isNeg) { 
+                isNeg = true;
                 Ctextbox().Text = '-'+Ctextbox().Text.ToString().Substring(0, Ctextbox().Text.ToString().Length);
-            else
-
+            }
+            else { 
+                isNeg = false;
+                Ctextbox().Text = Ctextbox().Text.ToString().Substring(1, Ctextbox().Text.ToString().Length-1);
+            }
         }
 
         private void dotBtn_Click(object sender, RoutedEventArgs e)
         {
-            Ctextbox().Text += '.';
+            if (!Ctextbox().Text.Contains('.'))
+            {
+                Ctextbox().Text += '.';
+            }
+            
         }
 
         private void sinBtn_Click(object sender, RoutedEventArgs e)
@@ -246,7 +303,30 @@ namespace Calculator
             _operator = 't';
         }
 
-        
+        private void Deg_Rad_Click(object sender, RoutedEventArgs e)
+        {
+            if (_RadDeg == Math.PI / 180)
+            {
+                _RadDeg = 1;
+            }
+            else
+                _RadDeg = Math.PI / 180;
+
+        }
+
+        private void shift_Click(object sender, RoutedEventArgs e)
+        {
+            if (_shift)
+            {
+                _shift = false;
+                shift.Background = clearBtn.Background;
+            }
+            else
+            {
+                _shift = true;
+                shift.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
+            }
+        }
     }
     
 
